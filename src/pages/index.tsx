@@ -4,15 +4,15 @@ import './styles.css'; // Import the CSS file for styles
 
 const CalculatePage = () => {
   const [salary, setSalary] = useState('');
-  const [fixedCosts] = useState(1352);
-  const [myIncome] = useState(2925);
-  const [amountToPay, setAmountToPay] = useState(null);
+  const [fixedCosts] = useState(1414);
+  const [myIncome] = useState(2975);
+  const [amountToPay, setAmountToPay] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     const salaryNum = parseFloat(salary);
-    const myIncomeNum = parseFloat(myIncome);
+    const myIncomeNum = parseFloat(myIncome.toString());
     
     if (isNaN(salaryNum) || salaryNum < 0 || isNaN(myIncomeNum) || myIncomeNum <= 0) {
       alert('Please enter valid income values.');
@@ -43,7 +43,7 @@ const CalculatePage = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      {amountToPay !== null && (
+      {amountToPay !== '' && (
         <div className="result">
           <h2>Maand bedrag is: €{amountToPay}</h2>
         </div>
