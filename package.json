@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build",
-    "deploy": "npm run build && gh-pages -d out"
+    "build": "next build"
   },
   "dependencies": {
     "react": "19.0.0-rc-69d4b800-20241021",

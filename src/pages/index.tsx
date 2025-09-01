@@ -4,7 +4,7 @@ import './styles.css'; // Import the CSS file for styles
 
 const CalculatePage = () => {
   const [salary, setSalary] = useState('');
-  const [fixedCosts] = useState(1414);
+  const [fixedCosts] = useState(1471);
   const [myIncome] = useState(2975);
   const [amountToPay, setAmountToPay] = useState('');
 
